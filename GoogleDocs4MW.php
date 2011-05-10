@@ -5,9 +5,9 @@
  *
  * @file
  * @ingroup Extensions
- * @version 1.0
+ * @version 1.1
  * @author Jack Phoenix <jack@shoutwiki.com>
- * @copyright © 2008-2010 Jack Phoenix
+ * @copyright © 2008-2011 Jack Phoenix
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -18,7 +18,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 // Add extension credits that show up on Special:Version
 $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'GoogleDocs4MW',
-	'version' => '1.0',
+	'version' => '1.1',
 	'author' => 'Jack Phoenix',
 	'description' => 'Adds <tt>&lt;googlespreadsheet&gt;</tt> tag for Google Docs\' spreadsheets display',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:GoogleDocs4MW'
@@ -39,8 +39,8 @@ function renderGoogleSpreadsheet( $input, $argv ) {
 	$key = htmlspecialchars( $input );
 
 	$output = '<iframe class="googlespreadsheetframe" width="' .
-				htmlspecialchars( $width ) . '" height="' .
-				htmlspecialchars( $height ) . '" style="' .
+				intval( $width ) . '" height="' .
+				intval( $height ) . '" style="' .
 				htmlspecialchars( $style ) .
 				'" src="http://spreadsheets.google.com/pub?key=' . $key .
 				'&output=html&widget=true"></iframe>';
