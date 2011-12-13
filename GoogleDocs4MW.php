@@ -21,7 +21,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version' => '1.1',
 	'author' => 'Jack Phoenix',
 	'description' => 'Adds <tt>&lt;googlespreadsheet&gt;</tt> tag for Google Docs\' spreadsheets display',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:GoogleDocs4MW'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:GoogleDocs4MW'
 );
 
 // Set up the parser hook
