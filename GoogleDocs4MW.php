@@ -16,9 +16,11 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'GoogleDocs4MW',
 	'version' => '1.2',
 	'author' => 'Jack Phoenix',
-	'description' => 'Adds <code>&lt;googlespreadsheet&gt;</code> tag for Google Docs\' spreadsheets display',
+	'descriptionmsg' => 'googledocs4mw-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:GoogleDocs4MW'
 );
+
+$wgMessagesDirs['GoogleDocs4MW'] = __DIR__ . '/i18n';
 
 // Set up the parser hook
 $wgAutoloadClasses['GoogleDocs4MW'] = __DIR__ . '/GoogleDocs4MW.class.php';

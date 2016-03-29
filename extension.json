@@ -6,8 +6,13 @@
 	],
 	"license-name": "GPL-2.0+",
 	"url": "https://www.mediawiki.org/wiki/Extension:GoogleDocs4MW",
-	"description": "Adds <code>&lt;googlespreadsheet&gt;</code> tag for Google Docs' spreadsheets display",
+	"descriptionmsg": "googledocs4mw-desc",
 	"type": "parserhook",
+	"MessagesDirs": {
+		"GoogleDocs4MW": [
+			"i18n"
+		]
+	},
 	"AutoloadClasses": {
 		"GoogleDocs4MW": "GoogleDocs4MW.class.php"
 	},
