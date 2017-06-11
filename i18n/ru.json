@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm"
+		]
+	},
+	"googledocs4mw-desc": "Добавляет тег <code>&lt;googlespreadsheet&gt;</code> для отображения электронных таблиц Google Docs."
+}
