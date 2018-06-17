@@ -29,8 +29,8 @@ class GoogleDocs4MW {
 				intval( $width ) . '" height="' .
 				intval( $height ) . '" style="' .
 				htmlspecialchars( $style, ENT_QUOTES ) .
-				'" src="http://spreadsheets.google.com/pub?key=' . $key .
-				'&output=html&widget=true"></iframe>';
+				'" src="https://docs.google.com/spreadsheets/d/e/' . $key .
+				'/pub"></iframe>';
 
 		return $output;
 	}
