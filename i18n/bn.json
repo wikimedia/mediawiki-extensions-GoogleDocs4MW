@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"googledocs4mw-desc": "গুগল ডকের পাতার প্রদর্শনের জন্য <code>&lt;googlespreadsheet&gt;</code> ট্যাগ যোগ করে"
