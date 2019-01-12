@@ -6,16 +6,15 @@
  * @file
  * @ingroup Extensions
  * @version 1.2
- * @author Jack Phoenix <jack@shoutwiki.com>
- * @copyright © 2008-2015 Jack Phoenix
+ * @author Jack Phoenix
+ * @copyright © 2008-2019 Jack Phoenix
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class GoogleDocs4MW {
 
 	public static function registerTag( &$parser ) {
-		$parser->setHook( 'googlespreadsheet', array( __CLASS__, 'renderGoogleSpreadsheet' ) );
-		return true;
+		$parser->setHook( 'googlespreadsheet', [ __CLASS__, 'renderGoogleSpreadsheet' ] );
 	}
 
 	// The callback function for converting the input to HTML output
@@ -29,8 +28,8 @@ class GoogleDocs4MW {
 				intval( $width ) . '" height="' .
 				intval( $height ) . '" style="' .
 				htmlspecialchars( $style, ENT_QUOTES ) .
-				'" src="http://spreadsheets.google.com/pub?key=' . $key .
-				'&output=html&widget=true"></iframe>';
+				'" src="https://docs.google.com/spreadsheets/d/' . $key .
+				'/htmlembed?widget=true"></iframe>';
 
 		return $output;
 	}

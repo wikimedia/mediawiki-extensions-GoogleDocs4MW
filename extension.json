@@ -1,6 +1,6 @@
 {
 	"name": "GoogleDocs4MW",
-	"version": "1.3",
+	"version": "1.4",
 	"author": [
 		"Jack Phoenix"
 	],
@@ -17,9 +17,7 @@
 		"GoogleDocs4MW": "GoogleDocs4MW.class.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"GoogleDocs4MW::registerTag"
-		]
+		"ParserFirstCallInit": "GoogleDocs4MW::registerTag"
 	},
 	"manifest_version": 1
 }
