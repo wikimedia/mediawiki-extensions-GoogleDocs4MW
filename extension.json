@@ -14,7 +14,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"GoogleDocs4MW": "GoogleDocs4MW.class.php"
+		"GoogleDocs4MW": "src/GoogleDocs4MW.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "GoogleDocs4MW::registerTag"
