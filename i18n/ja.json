@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ant176"
+		]
+	},
+	"googledocs4mw-desc": "Googleドキュメントのスプレッドシートを埋め込むための <code>&lt;googlespreadsheet&gt;</code> タグを追加する"
+}
