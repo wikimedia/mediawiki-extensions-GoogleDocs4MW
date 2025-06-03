@@ -1,6 +1,6 @@
 {
 	"name": "GoogleDocs4MW",
-	"version": "1.4",
+	"version": "1.5",
 	"author": [
 		"Jack Phoenix"
 	],
@@ -9,7 +9,7 @@
 	"descriptionmsg": "googledocs4mw-desc",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.31.0"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"MessagesDirs": {
 		"GoogleDocs4MW": [
