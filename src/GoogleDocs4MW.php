@@ -1,4 +1,5 @@
 <?php
+
 /**
  * GoogleDocs4MW parser extension - adds <googlespreadsheet> tag for displaying
  * Google Docs' spreadsheets
@@ -25,22 +26,23 @@ class GoogleDocs4MW {
 	 *
 	 * @param string $input
 	 * @param array $argv
-	 * @return $output
+	 * @return string $output
 	 */
 	public static function renderGoogleSpreadsheet( $input, $argv ) {
-		$width = isset( $argv['width'] ) ? $argv['width'] : 500;
-		$height = isset( $argv['height'] ) ? $argv['height'] : 300;
-		$style = isset( $argv['style'] ) ? $argv['style'] : 'width:100%';
-		$key = htmlspecialchars( $input, ENT_QUOTES );
+		$width = $argv['width'] ?? 500;
+		$height = $argv['height'] ?? 300;
+		$style = $argv['style'] ?? 'width:100%';
+		$style = Sanitizer::checkCss( $style );
 
-		$output = '<iframe class="googlespreadsheetframe" width="' .
-				intval( $width ) . '" height="' .
-				intval( $height ) . '" style="' .
-				htmlspecialchars( $style, ENT_QUOTES ) .
-				'" src="https://docs.google.com/spreadsheets/d/' . $key .
-				'/htmlembed?widget=true"></iframe>';
+		$src = 'https://docs.google.com/spreadsheets/d/' . $input . '/htmlembed?widget=true';
 
-		return $output;
+		return Html::element( 'iframe', [
+			'class' => 'googlespreadsheetframe',
+			'width' => intval( $width ),
+			'height' => intval( $height ),
+			'style' => $style,
+			'src' => $src,
+		] );
 	}
 
 }
